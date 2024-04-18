@@ -9,14 +9,12 @@ const config: Config = {
   theme: {
     colors: {
       transparent: "transparent",
-      "white": "#ffffff",
-      "black": "#000019",
-      "gray": "#BCBCBC",
-      "green": "#3BB76E",
-      "primary-blue": "#01002C",
-      "secondary-blue": "#2D2F61",
-      "primary-light-blue": "#7A83BB",
-      "secondary-light-blue": "#8E9BE5",
+      "white": "#FFFFFF",
+      "black": "#000000",
+      "primary-dark-blue": "#041026",
+      "secondary-dark-blue": "#013A65",
+      "primary-light-blue": "#2789FD",
+      "secondary-light-blue": "#1DBBFB",
     }
   },
   plugins: [],

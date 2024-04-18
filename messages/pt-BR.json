@@ -1,5 +1,12 @@
 {
-    "Index": {
-        "title": "Olá mundo!"
+    "NavBar": {
+        "about": "Sobre",
+        "solutions": "Soluções",
+        "highlights": "Destaques",
+        "contact": "Contato",
+        "hr": "Capacitação/Recursos Humanos"
+    },
+    "LocaleSwitcher": {
+        "label": "Idioma"
     }
 }
