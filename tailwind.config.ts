@@ -15,7 +15,7 @@ const config: Config = {
       "secondary-dark-blue": "#013A65",
       "primary-light-blue": "#2789FD",
       "secondary-light-blue": "#1DBBFB",
-    }
+    },
   },
   plugins: [],
 };

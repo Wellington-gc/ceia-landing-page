@@ -6,7 +6,8 @@ type Props = {
 
 export default function PageLayout({ children }: Props) {
     return (
-        <div className="min-h-screen bg-gradient-to-b from-primary-dark-blue to-secondary-light-blue text-white">
+        <div className="min-h-screen text-white"
+            style={{ backgroundImage: "url('/background.png')" }}>
             <NavBar />
             {children}
         </div>

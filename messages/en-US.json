@@ -4,7 +4,7 @@
         "solutions": "Solutions",
         "highlights": "Highlights",
         "contact": "Contact",
-        "hr": "Training/Human Resources"
+        "human-resources": "Training/Human Resources"
     },
     "LocaleSwitcher": {
         "label": "Language"

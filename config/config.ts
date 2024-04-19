@@ -21,13 +21,13 @@ export const pathnames = {
         'en-US': '/contact',
         'pt-BR': '/contato'
     },
-    '/hr': {
-        'en-US': '/hr',
-        'pt-BR': '/rh'
+    '/human-resources': {
+        'en-US': '/human-resources',
+        'pt-BR': '/recursos-humanos'
     },
-    '/partner': {
-        'en-US': '/partner',
-        'pt-BR': '/parceiro'
+    '/embrapii': {
+        'en-US': '/embrapii',
+        'pt-BR': '/embrapii'
     }
 } satisfies Pathnames<typeof locales>;
 
