@@ -6,8 +6,7 @@ type Props = {
 
 export default function PageLayout({ children }: Props) {
     return (
-        <div className="h-screen w-screen"
-            style={{ backgroundImage: "url('/background.png')" }}>
+        <div className="h-screen w-screen" style={{ backgroundImage: "url('/background.png')" }}>
             <NavBar />
             {children}
         </div>
