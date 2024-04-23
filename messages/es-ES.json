@@ -1,0 +1,12 @@
+{
+    "NavBar": {
+        "about": "Sobre",
+        "solutions": "Soluciones",
+        "highlights": "Aspectos Destacados",
+        "contact": "Contacto",
+        "human-resources": "Capacitación / Recursos Humanos"
+    },
+    "LocaleSwitcher": {
+        "label": "Idioma"
+    }
+}

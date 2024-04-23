@@ -1,33 +1,39 @@
 import { Pathnames } from "next-intl/navigation";
 
-export const defaultLocale = 'en-US' as const;
-export const locales = ['en-US', 'pt-BR'] as const;
+export const defaultLocale = 'pt-BR' as const;
+export const locales = ['pt-BR', 'en-US', 'es-ES'] as const;
 
 export const pathnames = {
     '/': '/',
     '/about': {
+        'pt-BR': '/sobre',
         'en-US': '/about',
-        'pt-BR': '/sobre'
+        'es-ES': '/sobre',
     },
     '/solutions': {
+        'pt-BR': '/solucoes',
         'en-US': '/solutions',
-        'pt-BR': '/solucoes'
+        'es-ES': '/soluciones',
     },
     '/highlights': {
+        'pt-BR': '/destaques',
         'en-US': '/highlights',
-        'pt-BR': '/destaques'
+        'es-ES': '/aspectos-destacados',
     },
     '/contact': {
+        'pt-BR': '/contato',
         'en-US': '/contact',
-        'pt-BR': '/contato'
+        'es-ES': '/contacto',
     },
     '/human-resources': {
+        'pt-BR': '/recursos-humanos',
         'en-US': '/human-resources',
-        'pt-BR': '/recursos-humanos'
+        'es-ES': '/recursos-humanos',
     },
     '/embrapii': {
+        'pt-BR': '/embrapii',
         'en-US': '/embrapii',
-        'pt-BR': '/embrapii'
+        'es-ES': '/embrapii',
     }
 } satisfies Pathnames<typeof locales>;
 

@@ -9,11 +9,12 @@ export default function LocaleSwitcher() {
         <LocaleSwitcherSelect defaultValue={locale}>
             {locales.map((locale) => {
                 return (
-                    <option key={locale} value={locale} style={{ backgroundColor: "lightgray", color: "black" }}>
+                    <option key={locale} value={locale} className="bg-black text uppercase">
                         {locale}
                     </option>
                 );
             })}
         </LocaleSwitcherSelect>
+
     );
 }

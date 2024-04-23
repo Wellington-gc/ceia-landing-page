@@ -1,6 +1,8 @@
 'use client';
 
 import { usePathname, useRouter } from "@/config/navigation";
+import { useLocale } from "next-intl";
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import { ChangeEvent, useTransition } from "react";
 
@@ -17,6 +19,7 @@ export default function LocaleSwitcherSelect({
     const [isPending, startTransition] = useTransition();
     const pathname = usePathname();
     const params = useParams();
+    const locale = useLocale();
 
     function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
         const nextLocale = event.target.value;
@@ -33,13 +36,20 @@ export default function LocaleSwitcherSelect({
     }
 
     return (
-        <select
-            className="bg-transparent px-4 py-2 border border-white rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-            defaultValue={defaultValue}
-            disabled={isPending}
-            onChange={onSelectChange}
-        >
-            {children}
-        </select>
+        <div className="flex flex-col items-center space-y-1">
+            <label htmlFor="select">
+                <Image src={`/${locale}.png`} alt="locale" width={38} height={24}></Image>
+            </label>
+            <select
+                className="bg-transparent uppercase outline-none"
+                defaultValue={defaultValue}
+                disabled={isPending}
+                onChange={onSelectChange}
+                id="select"
+            >
+                {children}
+            </select>
+        </div>
+
     );
 }
