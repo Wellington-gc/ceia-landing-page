@@ -8,5 +8,18 @@
     },
     "LocaleSwitcher": {
         "label": "Language"
+    },
+    "Footer": {
+        "institutional": "Institutional",
+        "ceia": "CEIA",
+        "human-resources": "Training/Human Resources",
+        "contact": "Contact Us",
+        "portfolio": "Portfolio",
+        "solutions": "Solutions CEIA",
+        "our-team": "Our Team",
+        "posts": "Posts",
+        "blog": "Blog",
+        "news": "News",
+        "socials": "Socials"
     }
 }

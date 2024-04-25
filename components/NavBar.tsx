@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import NavigationLink from "./NavigationLink";
 import LocaleSwitcher from "./LocaleSwitcher";
-import LogoComponent from "./LogoComponent";
+import Logo from "./Logo";
 
 export default function NavBar() {
     const t = useTranslations('NavBar');
@@ -9,7 +9,7 @@ export default function NavBar() {
     return (
         <nav className="flex justify-between items-center p-6 text-white">
             <div className="ml-10">
-                <LogoComponent />
+                <Logo />
             </div>
             <div className="flex items-center space-x-12">
                 <NavigationLink href="/about">{t('about')}</NavigationLink>
@@ -21,5 +21,5 @@ export default function NavBar() {
                 <LocaleSwitcher />
             </div>
         </nav>
-    )
+    );
 }
