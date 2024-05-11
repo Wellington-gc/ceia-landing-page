@@ -6,8 +6,8 @@ export default function Logo() {
     const locale = useLocale();
 
     return (
-        <Link className="flex items-center" href={`/${locale}`}>
-            <Image src="/logo.png" alt="Logo" width={57} height={73} />
+        <Link className="cursor-pointer h-20 w-14 relative" href={`/${locale}`}>
+            <Image src="/logo.png" alt="Logo" fill={true} />
         </Link>
     );
 }

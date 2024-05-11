@@ -1,13 +1,11 @@
-import Footer from "@/components/Footer";
-import PageLayout from "@/components/PageLayout"
+import PageBase from "@/components/PageBase";
 
 export default function EmbrapiiPage() {
     return (
         <>
-            <PageLayout>
-                <h1>Embrapii Page</h1>
-            </PageLayout>
-            <Footer />
+            <PageBase>
+                Embrapii Page
+            </PageBase>
         </>
     );
 }

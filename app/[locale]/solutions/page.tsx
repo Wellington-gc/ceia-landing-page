@@ -1,13 +1,11 @@
-import Footer from "@/components/Footer";
-import PageLayout from "@/components/PageLayout"
+import PageBase from "@/components/PageBase";
 
 export default function SolutionsPage() {
     return (
         <>
-            <PageLayout>
-                <h1>Solutions Page</h1>
-            </PageLayout>
-            <Footer />
+            <PageBase>
+                Solutions Page
+            </PageBase>
         </>
     );
 }

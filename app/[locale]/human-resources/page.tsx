@@ -1,13 +1,11 @@
-import Footer from "@/components/Footer";
-import PageLayout from "@/components/PageLayout"
+import PageBase from "@/components/PageBase";
 
 export default function HumanResourcesPage() {
     return (
         <>
-            <PageLayout>
-                <h1>Human Resources Page</h1>
-            </PageLayout>
-            <Footer />
+            <PageBase>
+                Human Resources Page
+            </PageBase>
         </>
     );
 }
