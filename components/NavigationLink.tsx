@@ -15,8 +15,8 @@ export default function NavigationLink<Pathname extends AppPathnames>(
     return (
         <Link
             aria-current={isActive ? "page" : undefined}
-            className={isActive ? 'text-white' : 'text-gray-300'}
             href={href}
+            style={{ textDecoration: 'none', color: 'inherit' }}
             {...rest}
         />
     );

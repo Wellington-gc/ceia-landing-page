@@ -1,0 +1,37 @@
+body {
+    overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #EEEEEE;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #013A65;
+    border-radius: 10px;
+}
+
+.locale-select-input {
+    background: transparent;
+    color: white;
+    padding-left: 65px;
+    width: 150px;
+    border: none;
+}
+
+.locale-select-section {
+    --input-left-section-pointer-events: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50px;
+}
+
+.locale-select-dropdown {
+    background: transparent;
+    border: none;
+    color: white;
+}

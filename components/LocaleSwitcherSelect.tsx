@@ -1,28 +1,34 @@
 'use client';
 
-import { usePathname, useRouter } from "@/config/navigation";
+import React, { useTransition } from "react";
 import { useLocale } from "next-intl";
-import Image from "next/image";
 import { useParams } from "next/navigation";
-import { ChangeEvent, useTransition } from "react";
+import { locales } from "@/config/config";
+import { usePathname, useRouter } from "@/config/navigation";
+import { Card, ComboboxItem, Container, Image, Select, SelectProps, Stack, Text } from "@mantine/core";
 
-type Props = {
-    children: React.ReactNode;
-    defaultValue: string;
-};
-
-export default function LocaleSwitcherSelect({
-    children,
-    defaultValue,
-}: Props) {
-    const router = useRouter();
+export default function LocaleSwitcherSelect() {
     const [isPending, startTransition] = useTransition();
+    const router = useRouter();
     const pathname = usePathname();
     const params = useParams();
     const locale = useLocale();
 
-    function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
-        const nextLocale = event.target.value;
+    const icons: Record<string, React.ReactNode> = {
+        'pt-BR': <Image src="/pt-BR.png" alt="Flag-br" w={38} h={24} />,
+        'en-US': <Image src="/en-US.png" alt="Flag-us" w={38} h={24} />,
+        'es-ES': <Image src="/es-ES.png" alt="Flag-es" w={38} h={24} />,
+    };
+
+    const renderSelectOption: SelectProps['renderOption'] = ({ option }) => (
+        <Stack>
+            {icons[option.value]}
+            {option.label}
+        </Stack>
+    );
+
+    function onSelectChange(option: ComboboxItem) {
+        const nextLocale = option.value;
 
         startTransition(() => {
             router.replace(
@@ -36,20 +42,24 @@ export default function LocaleSwitcherSelect({
     }
 
     return (
-        <div className="flex flex-col items-center space-y-1">
-            <label htmlFor="select">
-                <Image src={`/${locale}.png`} alt="locale" width={38} height={24}></Image>
-            </label>
-            <select
-                className="bg-transparent uppercase outline-none"
-                defaultValue={defaultValue}
-                disabled={isPending}
-                onChange={onSelectChange}
-                id="select"
-            >
-                {children}
-            </select>
-        </div>
-
+        <Select
+            classNames={{
+                input: 'locale-select-input',
+                section: 'locale-select-section',
+                wrapper: 'locale-select-wrapper',
+                dropdown: 'locale-select-dropdown',
+                options: 'locale-select-options',
+            }}
+            value={locale}
+            data={locales}
+            onChange={(_value, option) => onSelectChange(option)}
+            disabled={isPending}
+            defaultValue={locale}
+            renderOption={renderSelectOption}
+            leftSection={
+                <Image src={`/${locale}.png`} alt="Flag" w={38} h={24} />
+            }
+            comboboxProps={{ transitionProps: { transition: 'pop', duration: 200 } }}
+        />
     );
 }

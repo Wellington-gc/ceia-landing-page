@@ -1,13 +1,11 @@
-import Footer from "@/components/Footer";
-import PageLayout from "@/components/PageLayout"
+import PageBase from "@/components/PageBase";
 
 export default function HighlightsPage() {
     return (
         <>
-            <PageLayout>
-                <h1>Highlights Page</h1>
-            </PageLayout>
-            <Footer />
+            <PageBase>
+                Highlights Page
+            </PageBase>
         </>
     );
 }
