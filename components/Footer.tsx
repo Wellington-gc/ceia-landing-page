@@ -1,3 +1,4 @@
+import Link from "next/link";
 import NavigationLink from "./NavigationLink";
 import { faFacebook, faInstagram, faLinkedin, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -41,10 +42,18 @@ export default function Footer() {
                 <Stack p={"lg"} justify="end">
                     <Title order={3}>{t('socials')}</Title>
                     <Group gap={"lg"}>
-                        <FontAwesomeIcon icon={faInstagram} size="2x" />
-                        <FontAwesomeIcon icon={faLinkedin} size="2x" />
-                        <FontAwesomeIcon icon={faFacebook} size="2x" />
-                        <FontAwesomeIcon icon={faYoutube} size="2x" />
+                        <Link href={"https://www.instagram.com/ceiaufg/"} target="_blank">
+                            <FontAwesomeIcon icon={faInstagram} size="2x" color="white" />
+                        </Link>
+                        <Link href={"https://www.linkedin.com/company/inteligencia-artificial-deep-learning-brasil/"} target="_blank">
+                            <FontAwesomeIcon icon={faLinkedin} size="2x" color="white" />
+                        </Link>
+                        <Link href={"https://www.facebook.com/centrodeia/"} target="_blank">
+                            <FontAwesomeIcon icon={faFacebook} size="2x" color="white" />
+                        </Link>
+                        <Link href={"https://www.youtube.com/channel/UCuVftdqn8UJ8abkgI6dEA_w"} target="_blank">
+                            <FontAwesomeIcon icon={faYoutube} size="2x" color="white" />
+                        </Link>
                     </Group>
                 </Stack>
             </Flex>

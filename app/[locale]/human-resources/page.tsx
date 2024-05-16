@@ -1,10 +1,13 @@
+import HomePage from "@/components/HomePage";
 import PageBase from "@/components/PageBase";
 
 export default function HumanResourcesPage() {
     return (
         <>
             <PageBase>
-                Human Resources Page
+                <HomePage>
+                    Human Resources Page
+                </HomePage>
             </PageBase>
         </>
     );

@@ -4,7 +4,7 @@ import NavigationLink from "./NavigationLink";
 import Link from "next/link";
 import Footer from "./Footer";
 import LocaleSwitcherSelect from "./LocaleSwitcherSelect";
-import { AppShell, BackgroundImage, Burger, Container, Flex, Group, Image, Stack } from "@mantine/core";
+import { AppShell, Burger, Flex, Group, Image, Stack } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { useLocale, useTranslations } from "next-intl";
 
@@ -21,18 +21,18 @@ export default function PageBase({ children }: Props) {
         <>
             <AppShell
                 header={{ height: 0 }}
-                navbar={{ width: 300, breakpoint: 'md', collapsed: { desktop: true, mobile: !opened } }}
+                navbar={{ width: 300, breakpoint: 'lg', collapsed: { desktop: true, mobile: !opened } }}
                 padding="md">
                 <AppShell.Header withBorder={false} bg={"transparent"} c={"white"} pos={"absolute"}>
                     <Group h="100%" p="xl" justify="space-between">
                         <Group gap={"xl"}>
-                            <Burger opened={opened} onClick={toggle} hiddenFrom="md" size="md" color="white" />
+                            <Burger opened={opened} onClick={toggle} hiddenFrom="lg" size="md" color="white" />
                             <Link href={`/${locale}`}>
                                 <Image src={'/logo.png'} alt="Logo" w={57} h={73} />
                             </Link>
                         </Group>
                         <Group>
-                            <Flex visibleFrom="md" gap="3.6rem">
+                            <Flex visibleFrom="lg" gap="3.6rem" p={"lg"}>
                                 <NavigationLink href={'/about'}>{t('about')}</NavigationLink>
                                 <NavigationLink href={'/solutions'}>{t('solutions')}</NavigationLink>
                                 <NavigationLink href={'/highlights'}>{t('highlights')}</NavigationLink>
@@ -57,8 +57,7 @@ export default function PageBase({ children }: Props) {
                     </Stack>
                 </AppShell.Navbar>
 
-                <AppShell.Main p={0} c="white">
-                    <BackgroundImage src="/background.png" style={{ height: '100vh' }} />
+                <AppShell.Main p={0}>
                     {children}
                 </AppShell.Main>
 

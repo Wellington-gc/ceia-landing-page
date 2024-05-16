@@ -1,10 +1,13 @@
+import HomePage from "@/components/HomePage";
 import PageBase from "@/components/PageBase";
 
 export default function EmbrapiiPage() {
     return (
         <>
             <PageBase>
-                Embrapii Page
+                <HomePage>
+                    Embrapii Page
+                </HomePage>
             </PageBase>
         </>
     );

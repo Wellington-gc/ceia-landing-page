@@ -1,10 +1,13 @@
+import HomePage from "@/components/HomePage";
 import PageBase from "@/components/PageBase";
 
 export default function ContactPage() {
     return (
         <>
             <PageBase>
-                Contact Page
+                <HomePage>
+                    Contact Page
+                </HomePage>
             </PageBase>
         </>
     );

@@ -1,10 +1,13 @@
+import HomePage from "@/components/HomePage";
 import PageBase from "@/components/PageBase";
 
 export default function AboutPage() {
     return (
         <>
             <PageBase>
-                About Page
+                <HomePage>
+                    About Page
+                </HomePage>
             </PageBase>
         </>
     );

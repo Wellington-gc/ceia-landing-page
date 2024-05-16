@@ -5,7 +5,9 @@ import { useLocale } from "next-intl";
 import { useParams } from "next/navigation";
 import { locales } from "@/config/config";
 import { usePathname, useRouter } from "@/config/navigation";
-import { Card, ComboboxItem, Container, Image, Select, SelectProps, Stack, Text } from "@mantine/core";
+import { ComboboxItem, Image, Select, SelectProps, Stack, Text } from "@mantine/core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function LocaleSwitcherSelect() {
     const [isPending, startTransition] = useTransition();
@@ -21,9 +23,9 @@ export default function LocaleSwitcherSelect() {
     };
 
     const renderSelectOption: SelectProps['renderOption'] = ({ option }) => (
-        <Stack>
+        <Stack gap={0} pl={"3px"}>
             {icons[option.value]}
-            {option.label}
+            <Text>{option.label}</Text>
         </Stack>
     );
 
@@ -51,14 +53,18 @@ export default function LocaleSwitcherSelect() {
                 options: 'locale-select-options',
             }}
             value={locale}
-            data={locales}
+            data={locales.filter((l) => l !== locale)}
             onChange={(_value, option) => onSelectChange(option)}
             disabled={isPending}
             defaultValue={locale}
             renderOption={renderSelectOption}
             leftSection={
-                <Image src={`/${locale}.png`} alt="Flag" w={38} h={24} />
+                <Stack gap={0} align="center">
+                    <Image src={`/${locale}.png`} alt="Flag" w={38} h={24} />
+                    <Text c={"white"}>{locale}</Text>
+                </Stack>
             }
+            rightSection={<FontAwesomeIcon icon={faChevronDown} />}
             comboboxProps={{ transitionProps: { transition: 'pop', duration: 200 } }}
         />
     );

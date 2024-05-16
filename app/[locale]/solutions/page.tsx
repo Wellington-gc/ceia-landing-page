@@ -1,10 +1,13 @@
+import HomePage from "@/components/HomePage";
 import PageBase from "@/components/PageBase";
 
 export default function SolutionsPage() {
     return (
         <>
             <PageBase>
-                Solutions Page
+                <HomePage>
+                    Solutions Page
+                </HomePage>
             </PageBase>
         </>
     );
