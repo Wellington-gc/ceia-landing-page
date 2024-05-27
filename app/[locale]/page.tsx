@@ -4,7 +4,7 @@ import HomePage from "@/components/HomePage";
 import { useTranslations } from "next-intl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faLinkedin, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { Button, Container, Flex, Group, Image, Stack, Text, Title } from "@mantine/core";
+import { BackgroundImage, Button, Container, Flex, Group, Image, Stack, Text, Title } from "@mantine/core";
 
 export default function Home() {
     const t = useTranslations('HomePage');
@@ -44,6 +44,38 @@ export default function Home() {
                         />
                     </Flex>
                 </HomePage>
+                <Stack h={300} bg="linear-gradient(90deg, #041026 0%, #013A65 100%)" justify="center" p={"xl"}>
+                    <Flex justify={"space-evenly"} align={"center"} wrap={"revert"} c={"#F2F2F2"}>
+                        <Title>{t('partners')}</Title>
+                        <Image src={'/cemig.png'}></Image>
+                    </Flex>
+                </Stack>
+                <Container fluid h={"100vh"} bg="linear-gradient(90deg, #FFFFFF 0%, #EEEEEE 100%)">
+                    <Flex justify={"flex-start"} h={"100vh"} align={"flex-start"} p={"xl"}>
+                        <BackgroundImage src="/background2.svg" h={750} w={760}>
+                        </BackgroundImage>
+                    </Flex>
+                </Container>
+                <Container fluid h={"100vh"} bg="linear-gradient(90deg, #FFFFFF 0%, #EEEEEE 100%)">
+                    <Flex justify={"flex-end"} h={"100vh"} align={"flex-end"} p={"xl"}>
+                        <BackgroundImage src="/background2.svg" h={750} w={760}>
+                        </BackgroundImage>
+                    </Flex>
+                </Container>
+                <Stack h={300} bg="linear-gradient(90deg, #041026 0%, #013A65 100%)" justify="center" p={"xl"}>
+                    <Flex justify={"space-evenly"} align={"center"} wrap={"revert"} c={"#F2F2F2"}>
+                        <Title>{t('partners')}</Title>
+                        <Image src={'/cemig.png'}></Image>
+                    </Flex>
+                </Stack>
+                <Container fluid h={"100vh"} bg="linear-gradient(90deg, #FFFFFF 0%, #EEEEEE 100%)">
+                </Container>
+                <Container fluid h={"100vh"} bg="linear-gradient(90deg, #FFFFFF 0%, #EEEEEE 100%)">
+                    <Flex justify={"flex-end"} h={"100vh"} align={"flex-end"} p={"xl"}>
+                        <BackgroundImage src="/background2.svg" h={750} w={760}>
+                        </BackgroundImage>
+                    </Flex>
+                </Container>
             </PageBase >
         </>
     );
