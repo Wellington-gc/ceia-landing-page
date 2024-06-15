@@ -35,3 +35,16 @@ body::-webkit-scrollbar-thumb {
     border: none;
     color: white;
 }
+
+.carousel-controls {
+    transition: opacity 150ms ease;
+    opacity: 0;
+}
+
+.carousel-root {
+    &:hover {
+        .carousel-controls {
+            opacity: 1;
+        }
+    }
+}
